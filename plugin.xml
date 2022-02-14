@@ -22,7 +22,7 @@
 xmlns:rim="http://www.blackberry.com/ns/widgets"
 xmlns:android="http://schemas.android.com/apk/res/android"
            id="cordova-plugin-geolocation"
-      version="4.1.1-dev">
+      version="4.1.1">
 
     <name>Geolocation</name>
     <description>Cordova Geolocation Plugin</description>
@@ -57,10 +57,19 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             <clobbers target="navigator.geolocation" />
         </js-module>
 
-        <!-- We don't expose PositionError via clobber on Android as we use it internally only -->
+        <!-- We don't expose some js files via clobber on Android as we use it internally only -->
+        <js-module src="www/Coordinates.js" name="Coordinates">
+            <runs />
+        </js-module>
+        <js-module src="www/Position.js" name="Position">
+            <runs />
+        </js-module>
         <js-module src="www/PositionError.js" name="PositionError">
             <runs />
         </js-module>
+
+         <!-- additonal gradle -->
+        <framework src="src/android/geolocation.gradle" custom="true" type="gradleReference"/>
 
     </platform>
 

@@ -18,7 +18,11 @@
 # under the License.
 #
 -->
-# Release Notes
+# Release Notess
+
+### 4.1.1 (Feb 09, 2022)
+
+* [Pull-Request](https://github.com/kepat/cordova-plugin-geolocation/pull/1) enhance: function 'getCurrentPosition' implemented android native code in getting the current active location, to improve accuracy.
 
 ### 4.1.0 (Nov 06, 2020)
 
