@@ -1,3 +1,31 @@
+## Forked Repository
+
+This is a forked repository from [https://github.com/apache/cordova-plugin-geolocation](https://github.com/apache/cordova-plugin-geolocation).
+
+The purpose of this forked repository is to extend the capability of the plugin.
+
+### Android Quirks
+
+1. Version Android 9.0 and below requires you to enable to androidx in `gradle.properties`. To do that, you can use the `preference` tag in the `config.xml` like this:
+
+```
+<platform name="android">
+    <preference name="AndroidXEnabled" value="true" />
+</platform>
+```
+
+### Changes
+
+See the releasenotes.md for more details.
+
+Android
+
+* 4.1.1 - Implemented android native code in getting the current active location, to improve accuracy.
+
+---
+
+Below contains the original content of README.md file from the main author of the plugin.
+
 ---
 title: Geolocation
 description: Access GPS data.
